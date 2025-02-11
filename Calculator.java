@@ -5,17 +5,17 @@ public class Calculator
 {
     public static void main(String[] args)
     {
-        System.out.println("\nEnter two numbers to add, subtract, multiply, or divide.");
+        System.out.println("\nEnter two real numbers (decimal values supported) to add, subtract, multiply, or divide.");
         
         //Creates a new instance of the scanner class.
         Scanner input = new Scanner(System.in);
 
-        //Prompts the user to enter two integers and stores them as int values. Uses the nextInt() method.
+        //Prompts the user to enter two numbers and stores them as double values. Uses the nextDouble() method.
         System.out.print("\n\nEnter the first integer: ");
-        int int1 = input.nextInt();
+        double num1 = input.nextDouble();
 
         System.out.print("\nEnter the second integer: ");
-        int int2 = input.nextInt();
+        double num2 = input.nextDouble();
 
         //Prompts the user to enter an operation. Stores the value as an integer that corresponds to an operation.
         System.out.print("\nEnter \"1\" to add the integers, enter \"2\" to subtract, , enter \"3\" to multiply, or enter \"4\" to divide: ");
@@ -26,16 +26,16 @@ public class Calculator
         switch (operation)
         {
             case 1:
-                System.out.println("\n\nThe sum is " + (int1 + int2) + ".");
+                System.out.println("\n\nThe sum is " + (num1 + num2) + ".");
                 break;
             case 2:
-                System.out.println("\n\nThe difference is " + (int1 - int2) + ".");
+                System.out.println("\n\nThe difference is " + (num1 - num2) + ".");
                 break;
             case 3:
-                System.out.println("\n\nThe product is " + (int1 * int2) + ".");
+                System.out.println("\n\nThe product is " + (num1 * num2) + ".");
                 break;
             case 4:
-                System.out.println("\n\nThe quotient is " + ((double)int1 / (double)int2) + ".");
+                System.out.println("\n\nThe quotient is " + (num1 / num2) + ".");
                 break;
             default:
                 System.out.println("\n\nAn invalid operation was entered.");
