@@ -5,7 +5,7 @@ public class Calculator
 {
     public static void main(String[] args)
     {
-        System.out.println("\nEnter two numbers to add or subtract.");
+        System.out.println("\nEnter two numbers to add, subtract, multiply, or divide.");
         
         //Creates a new instance of the scanner class.
         Scanner input = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class Calculator
         int int2 = input.nextInt();
 
         //Prompts the user to enter an operation. Stores the value as an integer that corresponds to an operation.
-        System.out.print("\nEnter \"1\" to add the integers, or enter \"2\" to subtract: ");
+        System.out.print("\nEnter \"1\" to add the integers, enter \"2\" to subtract, , enter \"3\" to multiply, or enter \"4\" to divide: ");
         int operation = input.nextInt();
 
         //Switch statement to perform the correct operation.
@@ -30,6 +30,12 @@ public class Calculator
                 break;
             case 2:
                 System.out.println("\n\nThe difference is " + (int1 - int2) + ".");
+                break;
+            case 3:
+                System.out.println("\n\nThe product is " + (int1 * int2) + ".");
+                break;
+            case 4:
+                System.out.println("\n\nThe quotient is " + ((double)int1 / (double)int2) + ".");
                 break;
             default:
                 System.out.println("\n\nAn invalid operation was entered.");
