@@ -35,6 +35,12 @@ public class Calculator
                 System.out.println("\n\nThe product is " + (num1 * num2) + ".");
                 break;
             case 4:
+                //Invalid entry if the user attempts to divide by 0.
+                if (num2 == 0)
+                {
+                    System.out.println("Error: Divide by 0.");
+                    break;
+                }
                 System.out.println("\n\nThe quotient is " + (num1 / num2) + ".");
                 break;
             default:
